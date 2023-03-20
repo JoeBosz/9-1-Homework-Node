@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
-const fs = require("fs")
+const fs = require("fs");
+//const { default: inquirer } = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
+
 
 
 // const fs = require("fs");
@@ -29,7 +32,8 @@ const writeFile = (fileName, data) => {
 }
 
 const init = () => {
-    inquirer.createPromptModule(questions)
+
+    inquirer.prompt(questions)
     .then(function(data) {
         writeFile("README.md", generateMarkdown(data));
         console.log(data)

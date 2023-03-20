@@ -13,7 +13,6 @@ const renderLicense = (data) => {
 
 const generateMarkdown = (data) => {
     return `# ${data.title}
-
     ${renderLicense(data)}
     `;
 }
