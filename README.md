@@ -1,31 +1,31 @@
-# joe
+# Homework node 9
     
     ## Table of Contents
     - [Description](#description)
     
     ## Description
-    joe
+    This is a project I did to advance my mysql skills
     
     ## Installation
-    joe
+    I installed node and mysql
     
     ## Usage
-    joe
+    It is a readme markdown generator 
     
     ## License
-    joe
+    MIT
     
     ## Contributors
-    joe
+    Myself
     
     ## Test
-    joe
+    I used terminal
     
     ## Github
-    joe
+    joeboz
     
     ## Email
-    joe
+    joeboz@gmail.com
     
     
     
