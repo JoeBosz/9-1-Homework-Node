@@ -17,34 +17,39 @@
 //     `;
 // }
 
-function renderLicense(license){
-    if (license !== 'No License'){
-        return ""
+function renderLicenseBadge(license) {
+    if (license == "No license") {
+      return ""
     } else {
-        return "https://img.shields.io/badge/License-MIT-yellow.svg"
+      return `https://img.shields.io/badge/License-${license}-blue?style=flat-square`
     }
-}
-
-function renderLicenseLink(license){
-    if (license !== 'No License'){
-        return ""
+  }
+  
+  
+  function renderLicenseLink(license) {
+    if (license == "No license") {
+      return ""
     } else {
-        return "https://opensource.org/licenses/MIT"
+      return `[${license}](https://choosealicense.com/licenses/${license.toLowerCase().split(' ').join('-')})`
     }
-}
-
-function renderLicenseSection(license){
-    if (license !== 'No License'){
-        return ""
+  }
+  
+  
+  function renderLicenseSection(license) {
+    if (license == "No License") {
+      return ""
     } else {
-        return "This project is licensed under the MIT license."
-    }
-}
+      return `## License
 
-const generateMarkdown = (data) => {
+    ${renderLicenseLink(license)}
+      `
+    }
+  }
+
+function generateMarkdown(data)  {
     return `# ${data.title}
     
- ## Table of Contents
+## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -79,6 +84,9 @@ ${data.github}
 ## Email
 ${data.email}
     
+- Please visit my Github page at [github.com/${data.github}](https://github.com/${data.github})
+- For additional questions, please [send me an email](mailto:${data.email})
+
     
     `;
 }
