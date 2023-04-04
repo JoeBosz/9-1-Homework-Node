@@ -1,163 +1,86 @@
-// // const renderLicense = (data) => {
-// //     if (data.license) {
-// //         return `## License
-// //         whichever license is needed
-// //         `
-// //     }
-// //     else  {
-// //         return
-// //     }
-// // }
-
-
-
-// // const generateMarkdown = (data) => {
-// //     return `# ${data.title}
-// //     ${renderLicense(data)}
-// //     `;
-// // }
-
-// function renderLicense(license){
-//     if (license !== 'No License'){
-//         return ""
-//     } else {
-//         return "https://img.shields.io/badge/License-MIT-yellow.svg"
+// const renderLicense = (data) => {
+//     if (data.license) {
+//         return `## License
+//         whichever license is needed
+//         `
+//     }
+//     else  {
+//         return
 //     }
 // }
 
-// function renderLicenseLink(license){
-//     if (license !== 'No License'){
-//         return ""
-//     } else {
-//         return "https://opensource.org/licenses/MIT"
-//     }
-// }
 
-// function renderLicenseSection(license){
-//     if (license !== 'No License'){
-//         return ""
-//     } else {
-//         return "This project is licensed under the MIT license."
-//     }
-// }
 
 // const generateMarkdown = (data) => {
 //     return `# ${data.title}
-    
-//     ## Table of Contents
-//     - [Description](#description)
-//     - [Installation](#installation)
-//     - [Usage](#usage)
-//     - [License](#license)
-//     - [Contributors](#contributors)
-//     - [Test](#test)
-//     - [Github](#github)
-//     - [Email](#email)
-    
-    
-//     ## Description
-//     ${data.description}
-    
-//     ## Installation
-//     ${data.installation}
-    
-//     ## Usage
-//     ${data.usage}
-    
-//     ## License
-//     ${data.license}
-    
-//     ## Contributors
-//     ${data.contributors}
-    
-//     ## Test
-//     ${data.test}
-    
-//     ## Github
-//     ${data.github}
-    
-//     ## Email
-//     ${data.email}
-    
-    
+//     ${renderLicense(data)}
 //     `;
 // }
 
-// module.exports = generateMarkdown;
+function renderLicense(license){
+    if (license !== 'No License'){
+        return ""
+    } else {
+        return "https://img.shields.io/badge/License-MIT-yellow.svg"
+    }
+}
 
+function renderLicenseLink(license){
+    if (license !== 'No License'){
+        return ""
+    } else {
+        return "https://opensource.org/licenses/MIT"
+    }
+}
 
-function renderLicenseBadge(license) {
-    if (license == "No license") {
-      return ""
+function renderLicenseSection(license){
+    if (license !== 'No License'){
+        return ""
     } else {
-      return `https://img.shields.io/badge/License-${license}-blue?style=flat-square`
+        return "This project is licensed under the MIT license."
     }
-  }
-  
-  
-  function renderLicenseLink(license) {
-    if (license == "No license") {
-      return ""
-    } else {
-      return `[${license}](https://choosealicense.com/licenses/${license.toLowerCase().split(' ').join('-')})`
-    }
-  }
-  
-  
-  function renderLicenseSection(license) {
-    if (license == "No License") {
-      return ""
-    } else {
-      return `## License
-  
-    ${renderLicenseLink(license)}
-  
-      `
-    }
-  }
-  
-  // Framework for markdown file based on user input
-  function generateMarkdown(data) {
-    return `
-    # ${data.title} ![license badge](${renderLicenseBadge(data.license)})
-  
-    ## Description
+}
+
+const generateMarkdown = (data) => {
+    return `# ${data.title}
     
-    ${data.description}
+ ## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributors](#contributors)
+- [Test](#test)
+- [Github](#github)
+- [Email](#email)
+
     
-    ## Table of Contents
+## Description
+${data.description}
     
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
+## Installation
+${data.installation}
     
-    ## Installation
+## Usage
+${data.usage}
     
-    ${data.installation}
+## License
+${data.license}
     
-    ## Usage
+## Contributors
+${data.contributors}
     
-    ${data.usage}
-  
-    ${renderLicenseSection(data.license)}
+## Test
+${data.test}
     
-    ## Contributing
+## Github
+${data.github}
     
-    ${data.contribution}
+## Email
+${data.email}
     
-    ## Tests
     
-    ${data.tests}
-  
-    ## Questions
-  
-    - Please visit my Github page at [github.com/${data.github}](https://github.com/${data.github})
-    - For additional questions, please [send me an email](mailto:${data.email})
-  
-  `;
-  }
-  
-  module.exports = generateMarkdown;
+    `;
+}
+
+module.exports = generateMarkdown;
