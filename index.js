@@ -71,20 +71,25 @@ const questions = [
     // email
 ]
 
-const writeFile = (fileName, data) => {
-    fs.writeFile(fileName, data, function(err) {
-        console.log(data),
-        err ? console.log(err) : console.log("README has been generated!")
-    })
-}
+// const writeFile = (fileName, data) => {
+//     fs.writeFile(fileName, data, function(err) {
+//         console.log(data),
+//         err ? console.log(err) : console.log("README has been generated!")
+//     })
+// }
 
-const init = () => {
+
+    // inquirer.prompt(questions)
+    // .then(function(data) {
+    //     writeFile("README.md", generateMarkdown(data));
+    //     console.log(data)
+    // })
+
 
     inquirer.prompt(questions)
-    .then(function(data) {
-        writeFile("README.md", generateMarkdown(data));
-        console.log(data)
-    })
-}
+    .then(data => {
+        fs.writeFileSync("generatedREADME.md", generateMarkdown(data))
+    }
+);
 
-init()
+// init()

@@ -1,31 +1,4 @@
-# Homework node 9
-    
-    ## Table of Contents
-    - [Description](#description)
-    
-    ## Description
-    This is a project I did to advance my mysql skills
-    
-    ## Installation
-    I installed node and mysql
-    
-    ## Usage
-    It is a readme markdown generator 
-    
-    ## License
-    MIT
-    
-    ## Contributors
-    Myself
-    
-    ## Test
-    I used terminal
-    
-    ## Github
-    joeboz
-    
-    ## Email
-    joeboz@gmail.com
-    
-    
-    
+This is my node inquierer homework assignmen that i used to challenge myself on creating a markdown readme genertor! 
+
+https://drive.google.com/file/d/1QHWdWfWrZetmy92DJSEUfsm1l2IXNt6r/view
+
